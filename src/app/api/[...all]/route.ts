@@ -1,7 +1,7 @@
 import { app } from "@/server";
-import { NextRequest } from "next/server";
+import { handle } from 'hono/vercel'
 
-const handler = (req:NextRequest)=> app.fetch(req)
+const handler = ()=> handle(app)
 
 export {
     handler as POST,
