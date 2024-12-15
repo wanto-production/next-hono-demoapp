@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { createClient } from "@/utils/supabase/server";
 
 export const metadata: Metadata = {
   title: "Create Next App",
