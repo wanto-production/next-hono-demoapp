@@ -24,7 +24,7 @@ function Navbar({
   return (
     <header className=' w-full h-[70px] p-2 fixed top-0'>
         <nav className=' w-full h-full flex justify-between items-center px-2'>
-            <h2><i className='fa fa-user'></i> {user?.email?.replaceAll("@gmail.com","") || "Guest"}</h2>
+            <h2><i className='fa fa-user'></i> {user?.email?.replaceAll(/([0-9]|@gmail\.com)/g,"") || "Guest"}</h2>
 
             {user?(
                 <Button disabled={loading} onClick={handleSignout}>signOut</Button>
